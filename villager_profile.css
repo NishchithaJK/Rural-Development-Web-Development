@@ -1,0 +1,136 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0d8022, #b5b6d3);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+}
+
+/* Container for Profile */
+.profile-details {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    max-width: 600px;
+    width: 100%;
+    transition: transform 0.3s ease;
+    animation: fadeIn 1s ease-in-out;
+    transform: scale(0.95);
+    text-align: center;
+}
+
+.profile-details:hover {
+    transform: scale(1);
+}
+
+/* Animation for the Profile Container */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Profile Image */
+.profile-details img {
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+    animation: imageSlide 0.8s ease-in-out forwards;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Animation for Profile Image */
+@keyframes imageSlide {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.profile-details img:hover {
+    transform: scale(1.05);
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Profile Field Styles */
+p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 10px 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+}
+
+p strong {
+    color: #f9c10b;
+}
+
+/* Hover effect on profile fields */
+p:hover {
+    color: #f9c10b;
+    transform: scale(1.02);
+}
+
+/* Button Styles */
+a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #f9c10b;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+a:hover {
+    background-color: #ffd700;
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .profile-details {
+        max-width: 90%;
+        padding: 15px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
